@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: #ccc;   
+}
+
+.blackLayer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    position: absolute;
+    left: 0;
+    transition: .5s;
+    animation: leftToRight 1s linear forwards;
+}
+
+ @keyframes leftToRight {
+    0% {
+        left: 200%;
+    }
+
+    100% {
+        left: 0;
+    }
+} 
+
+.ani {
+    width: 25vw;
+    height: 100%;
+    background: #FFF;
+    animation: comingDown .5s linear 1s forwards;
+    position: absolute;
+    top: -100%;
+}
+
+
+.ani:nth-of-type(2) {
+    left: 25%;
+    animation: comingDown .5s linear 1.5s forwards;
+    position: absolute;
+}
+
+
+.ani:nth-of-type(3) {
+    left: 50%;
+    animation: comingDown .5s linear 2s forwards;
+    position: absolute;
+}
+
+.ani:nth-of-type(4) {
+    left: 75%;
+    animation: comingDown .5s linear 2.5s forwards;
+    position: absolute;
+}
+
+
+@keyframes comingDown {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 0;
+    }
+    
+}
